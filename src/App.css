@@ -1,38 +1,74 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  margin-top: 15rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1 {
+  font-size: 100px;
+  padding-left: 5em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+
+
+body {
+  background-image: url(images/micheile-henderson-ZVprbBmT8QA-unsplash.jpg);
+  background-size: cover;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.title {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left: 2em;
+  font-size: 10px;
+  margin-top: -10rem;
+
 }
 
-.App-link {
-  color: #61dafb;
+
+input {
+  height: 30px;
+  width: 20em;
+  border-radius: 10px;
+  border: 2px solid black;
+  font-size: 20px;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.transactionForm input{
+  margin-left: 40em;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.table {
+  margin-left: 7em;
+}
+
+.table tr{
+  background-color: gray;
+  height: 3em;
+
+}
+
+.table td {
+  background-color: lightgrey;
+  width: 25em;
+  height: 3em;
+}
+
+.transaction input{
+width: 10em;
+padding-left: 50px;
+margin-left: 40em;
+margin-top: 3em;
+
+}
+
+.submit-btn {
+  height: 0px;
+  background-color: yellowgreen;
+  width: 10em;
+  padding-bottom: 2em;
 }
