@@ -12,7 +12,6 @@ const Form = ({transactions, setTransactions}) => {
     const name = event.target.name
     const value = event.target.value
 
-    //updating state
     setFormData({
         ...formData, [name]: value
     })
@@ -20,8 +19,28 @@ const Form = ({transactions, setTransactions}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setTransactions([...transactions, formData])
+        
+    fetch("http://localhost:3001/transactions", {
+      method : "POST",
+      headers : {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+      },
+      body : JSON.stringify(formData)
+  })
+  .then(res => res.json())
+  .then(transaction => setTransactions([transaction, ...transactions]))
+    
+
+     setFormData({
+        description: '',
+        category: '',
+        amount: '',
+        date: ''
+     })
   }
+
+
  
 
 
