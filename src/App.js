@@ -9,19 +9,22 @@ const title = "FLATIRON BANK";
 const [transactions, setTransactions] = useState([])
 
 useEffect(() => {
-  fetch('http://localhost:3000/transactions')
+  fetch('http://localhost:3001/transactions')
   .then(res => res.json())
-  .then(transactions => console.log(transactions))
-  .catch(error => console.log(error))
+  .then(data => {
+    console.log(data);
+    setTransactions(data)
+  })
+  // .catch(error => console.log(error))
 },[])
 
   return (
 
    <div className='App'>
       <h1 className='title'>{title}</h1>
-      <Form /> 
+      <Form transactions={transactions} setTransactions={setTransactions}/> 
       <SearchInput />
-      <Transaction />
+      <Transaction transaction={transactions} />
     </div>
   )
 }
