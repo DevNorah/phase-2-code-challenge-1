@@ -20,7 +20,7 @@ const Form = ({ setTransactions }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    fetch("http://localhost:3001/transactions", {
+    fetch("https://bank-of-flatiron-server.vercel.app/transactions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
