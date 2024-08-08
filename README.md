@@ -1,6 +1,6 @@
 # FLATIRON BANK
 
-FLATIRON BANK is a simple e-commerce web application that allows users to view transactions they made and add add new ones.
+FLATIRON BANK is a simple e-commerce web application that allows users to view transactions they made and add new ones.
 
 
 ![screenshot](src/images/FLATIRON%20BANK.png)
