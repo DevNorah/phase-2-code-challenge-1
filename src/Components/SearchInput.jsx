@@ -1,9 +1,14 @@
-import React from 'react'
+import React,{useState} from 'react'
 
-function SearchInput() {
+const SearchInput = ({onSearch}) => {
+    const [query, setQuery] =useState('')
+    const handleSearch = (e) => {
+        setQuery(e.target.value)
+        onSearch(e.target.value)
+    }
   return (
-    <div className='search-input'>
-        <input type="text" placeholder='Search for transaction...'/>
+    <div>
+        <input className="search-input" type="text" placeholder='Search...' value={query} onChange={handleSearch} />
     </div>
   )
 }
