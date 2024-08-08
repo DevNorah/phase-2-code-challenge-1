@@ -1,64 +1,58 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-const Form = ({transactions, setTransactions}) => {
+const Form = ({ setTransactions }) => {
   const [formData, setFormData] = useState({
     description: '',
     category: '',
     amount: '',
     date: ''
-  }) 
+  });
 
-  const handleOnchange = (event) => {
-    const name = event.target.name
-    const value = event.target.value
-
+  const handleOnChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
     setFormData({
-        ...formData, [name]: value
-    })
-}
+      ...formData,
+      [name]: value
+    });
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-        
-    fetch("http://localhost:3001/transactions", {
-      method : "POST",
-      headers : {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-      },
-      body : JSON.stringify(formData)
-  })
-  .then(res => res.json())
-  .then(transaction => setTransactions([transaction, ...transactions]))
+    e.preventDefault();
     
-
-     setFormData({
-        description: '',
-        category: '',
-        amount: '',
-        date: ''
-     })
-  }
-
-
- 
-
+    fetch("http://localhost:3001/transactions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(res => res.json())
+    .then(newTransaction => {
+      setTransactions(newTransaction);
+    })
+    .catch(error => console.log(error));
+    
+    setFormData({
+      description: '',
+      category: '',
+      amount: '',
+      date: ''
+    });
+  };
 
   return (
-   <div className="Form">
-
-     <form onSubmit={handleSubmit}>
-        
-        <input type="text" name='description' placeholder='Description' value={formData.description} onChange={handleOnchange}/>
-        <input type="text" name='category' placeholder='Category' value={formData.category} onChange={handleOnchange}/>
-        <input type="number" name='amount' placeholder='Amount' value={formData.amount} onChange={handleOnchange}/>
-        <input type="date" name='date' placeholder='Date' value={formData.date} onChange={handleOnchange}/>
-        <input type="Submit" value="Submit" />
-
+    <div className="Form">
+      <form onSubmit={handleSubmit}>
+        <input type="text" name='description' placeholder='Description' value={formData.description} onChange={handleOnChange} />
+        <input type="text" name='category' placeholder='Category' value={formData.category} onChange={handleOnChange} />
+        <input type="number" name='amount' placeholder='Amount' value={formData.amount} onChange={handleOnChange} />
+        <input type="date" name='date' placeholder='Date' value={formData.date} onChange={handleOnChange} />
+        <input className="submit-btn"type="submit" value="Submit" />
       </form>
-   </div>
-  
-  )
-}
+    </div>
+  );
+};
 
-export default Form
+export default Form;
