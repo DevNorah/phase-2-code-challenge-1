@@ -10,7 +10,7 @@ function App() {
   const [filteredTransactions, setFilteredTransactions] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/transactions')
+    fetch('https://bank-of-flatiron-server.vercel.app/transactions')
       .then(res => res.json())
       .then(data => {
         console.log(data);
