@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# FLATIRON BANK
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+FLATIRON BANK is a simple e-commerce web application that allows users to view transactions they made and add add new ones.
 
-## Available Scripts
 
-In the project directory, you can run:
+![screenshot](src/images/FLATIRON%20BANK.png)
 
-### `npm start`
+## INSTALLATION
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository from https://github.com/DevNorah/phase-2-code-challenge-1
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Open the cloned repository in your code editor.
 
-### `npm test`
+## RUNNING THE CODE
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. To run the code you need to run the "npm start" command on the terminal
 
-### `npm run build`
+3. You can also run the code using this deployed live link https://phase-2-code-challenge-1-peach.vercel.app/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## HOW IT WORKS
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Run the code using the code editor or the live link provided above.
 
-### `npm run eject`
+2. When the page loads, a table of transactions will appear. This is where you can view all the transactions you made before.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. You can use the search bar to search for a particular transaction from the list.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Fill out the form provided then click the submit button to add new transactions to the table.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# TECHNOLOGY USED
+* Visual Studio 
+* JavaScript 
+* React
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# FRAMEWORK USED
+    GIT
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### * AUTHOR *
+Norah Kinyamasyo.
